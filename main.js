@@ -1,3 +1,4 @@
+//operator functions
 function add(num1, num2) {
     console.log(num1 + num2);
     return num1 + num2;
@@ -51,23 +52,21 @@ function operate(num1, operator, num2) {
     return result;
 }
 
+//create calculator UI
 let display = document.getElementById("display");
-display.innerHTML = `<h1 id='displayText'>0</h1>`;
+display.innerText = `0`;
+
 let btnBar = document.getElementById("btnBar");
 
-let clrSpan = document.createElement("span");
-clrSpan.id = "clear";
 let clrBtn = document.createElement("button");
-clrBtn.innerHTML = `<span>CLEAR</span>`;
-clrSpan.append(clrBtn);
-btnBar.append(clrSpan);
+clrBtn.id = "clear";
+clrBtn.innerText = `CLEAR`;
+btnBar.append(clrBtn);
 
-let delSpan = document.createElement("span");
-delSpan.id = "delete";
 let delBtn = document.createElement("button");
-delBtn.innerHTML = `<span>DELETE</span>`;
-delSpan.append(delBtn);
-btnBar.append(delSpan);
+delBtn.id = "delete";
+delBtn.innerText = `DELETE`;
+btnBar.append(delBtn);
 
 let btnGrid = document.getElementById("btnGrid");
 let btnArray = ["7", "8", "9", String.fromCharCode(247), "4", "5", "6",
@@ -75,7 +74,7 @@ let btnArray = ["7", "8", "9", String.fromCharCode(247), "4", "5", "6",
 
 btnArray.forEach(btn => {
     let button = document.createElement("button");
-    button.innerHTML = `<span>${btn}</span>`;
+    button.innerText = `${btn}`;
     button.id = `${btn}`;
     button.className = "gridBtn";
     btnGrid.append(button);

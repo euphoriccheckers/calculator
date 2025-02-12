@@ -30,6 +30,7 @@ body {
     min-height: 50px;
     justify-content: right;
     align-items: end;
+    font-size: xx-large;
 }
 
 #btnBar {
@@ -42,12 +43,10 @@ body {
 #clear,
 #delete {
     display: flex;
-    min-width: 166px;
+    max-width: 166px;
     min-height: 50px;
-}
-
-#clear > button,
-#delete > button {
+    justify-content: center;
+    align-items: center;
     flex: 1;
 }
 
